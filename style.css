@@ -77,16 +77,149 @@
     filter: grayscale(50%) blur(4px);
 }
 /* Fine esercizio 7 */
+
+/* Inizio esercizio 8 */
+.ex-8-img:hover{
+    transition: 2s;
+    filter: blur(2px) sepia(40%);
+    border-radius: 25px;
+}
+/* Fine esercizio 8 */
+
+/* Inizio esercizio 9 */
 .ex-9-img {
+    transition: 2s;
     margin: 50px 100px;
     width: 400px;
 }
+.ex-9-img:hover{
+    filter: blur(2px) sepia(40%);
+    border-radius: 25px;
+    transform: scale(1.5);
+}
+/* Fine esercizio 9 */
+/* Inizio esercizio 10 */
 .ex-10-icon {
     font-size: 60px;
+    animation: spin 2s linear infinite;
 }
+@keyframes spin {
+    0% {
+        transform: rotate(1turn);
+    }
+}
+/* Fine esercizio 10 */
+/* Inizio esercizio 11 */
 .ex-11-icon {
     font-size: 60px;
 }
+.ex-11-icon:hover {
+    animation: spinALittleBit 3s linear;
+}
+@keyframes spinALittleBit {
+    0% {
+        transform: rotate(0);
+    }
+    90% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+/* Fine esercizio 11 */
+
+/* Inizio esercizio 12 */
+.ex-12-button:hover .ex-12-top-white {
+    animation: moveTopWhite 2s linear;
+}
+@keyframes moveTopWhite {
+    0% {
+        left: 10%;
+    }
+    50% {
+        left: calc(100% - 60px);
+    }
+    100% {
+        left: 10%;
+    }
+}
+.ex-12-button:hover .ex-12-bottom-white {
+    animation: moveBottomWhite 2s linear;
+}
+@keyframes moveBottomWhite {
+    0% {
+        right: 20%;
+    }
+    50% {
+        right: calc(100% - 60px);
+    }
+    100% {
+        right: 20%;
+    }
+}
+/* Fine esercizio 12 */
+
+/* Inizio esercizio 13 */
+.ex-13-button:hover .ex-13-top-white {
+    animation: moveTopWhiteCompletely 2s linear;
+}
+@keyframes moveTopWhiteCompletely {
+    0% {
+        left: 10%;
+        top: -10px;
+    }
+    30% {
+        left: calc(100% - 30px);
+        top: -10px;
+    }
+    45% {
+        left: calc(100% - 30px);
+        top: 100%;
+    }
+    75% {
+        left: 0;
+        top: 100%;
+    }
+    90% {
+        left: -15px;
+        top: -10px;
+    }
+    100% {
+        left: 10%;
+        top: -10px;
+    }
+}
+.ex-13-button:hover .ex-13-bottom-white {
+    animation: moveBottomWhiteCompletely 2s linear;
+}
+@keyframes moveBottomWhiteCompletely {
+    0% {
+        bottom: -10px;
+        right: 20%;
+    }
+    30% {
+        right: calc(100% - 30px);
+        bottom: -10px;
+    }
+    45% {
+        right: calc(100% - 30px);
+        bottom: 100%;
+    }
+    75% {
+        right: 0;
+        bottom: 100%;
+    }
+    90% {
+        right: -15px;
+        bottom: -10px;
+    }
+    100% {
+        bottom: -10px;
+        right: 20%;
+    }
+}
+/* Fine esercizio 13 */
 .ex-12-button, .ex-13-button {
     position: relative;
     display: block;
@@ -98,7 +231,7 @@
     font-size: 20px;
     line-height: 70px;
     text-align: center;
-    text-decoration: none;
+    text-decoration: none;    
 }
 .ex-12-top-white, .ex-13-top-white {
     position: absolute;
